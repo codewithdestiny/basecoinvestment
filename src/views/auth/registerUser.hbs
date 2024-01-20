@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body class="md:p-0 p-6">
+
+
+    <div id="create-account" class="md:w-1/3 md:rounded-lg rounded-none md:mt-20 mt-8 mx-auto md:p-10 p-7">
+        <h2 class="my-3 text-3xl text-white">Create New account</h2>
+        <form class="block" method="post" action="sign-up-form">
+            <label class="text-sky-300 ml-2">Firstname:</label>
+            <div class="mt-1 block mb-4">
+                <input type="text" required name="firstName" placeholder="Your Password" class="py-2.5 placeholder:text-gray-300 outline-none rounded-lg w-full px-5 ">
+            </div>
+
+            <label class="text-sky-300 ml-2">Lastname:</label>
+            <div class="mt-1 block mb-4">
+                <input type="text" minlength="3" required name="lastName" placeholder="Your Password" class="py-2.5 placeholder:text-gray-300 outline-none rounded-lg w-full px-5 ">
+            </div>
+
+
+            <label class="text-sky-300 ml-2">Email:</label>
+            <div class="mt-1 mb-4">
+                <input type="email" required name="email" placeholder="Email address" class="py-2.5 placeholder:text-gray-300 outline-none rounded-lg w-full px-5 ">
+            </div>
+
+            <label class="text-sky-300 ml-2">Password:</label>
+            <div class="mt-1 block">
+                <input type="password" required name="password" placeholder="Your Password" class="py-2.5 placeholder:text-gray-300 outline-none rounded-lg w-full px-5 ">
+            </div>
+            
+            <div class="mt-2 flex justify-end">
+                <div class="text-sm text-blue-300">Forgot password? <a href="password/reset" class="text-gray-200 hover:text-orange-700 transition-colors ml-1.5">Reset</a></div>
+            </div>
+
+            <div class="mt-9">
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 transition-all py-2.5 px-5 rounded-lg">Submit</button>
+            </div>
+
+            <div class="mt-8 flex justify-evenly">
+                <div class="text-sm text-gray-600">Already have an account? <a href="sign-in" class="text-gray-200 hover:text-blue-700 transition-colors ml-1.5">Log In</a></div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    background: #790909 url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#offset-text {
+    font-size: 9px !important;
+}
+.offset-desc {
+    font-size: 13.5px;
+}
+
+#staking{
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card-radius-bottom {
+    border-bottom-right-radius: 82px;
+    border-bottom-left-radius: 82px;
+}
+
+.cancel-btn{
+    transition: transform 1s;
+    transform-origin: 0;
+}
+.cancel-btn:hover {
+  transform: scale(1.1);
+}
+
+.desc-wrapper{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#productcontainer, #company-container{
+    display: none;
+}
+.buy-crypto{
+    background: rgba(58, 127, 139, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(58, 127, 139, 0.3);
+}
+.menu-container {
+    border-radius: 0px;
+    background: #1380a4;
+    box-shadow:  20px 20px 60px #106d8b,
+                -20px -20px 60px #1693bd;
+}
+.rate-title {
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 50px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+.background {
+  
+    position
+    :
+     absolute
+    ;
+    display: block;
+      
+    top
+    : 0;
+      
+    left
+    : 0;
+      
+    z-index: -10;
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.43);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+}
+
+#create-account{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#dashboard-body{
+    background: rgba(255, 255, 255, 0.2);
+    background-size: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#btn-widthraw {
+    font-size: 10px;
+}
