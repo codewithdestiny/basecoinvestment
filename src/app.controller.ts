@@ -13,9 +13,9 @@ export class AppController {
     return {title: ' Home || BaseCoinvestment Profitable Cryptocurrency mining '}
   }
 
-  @Get('legal')
-  @Render('legal')
+  @Get('about')
+  @Render('about')
   legal(){
-    return {title: `Terms and Condition ${process.env.APP_NAME}`}
+    return {title: `About Page || ${process.env.APP_NAME}`}
   }
 }

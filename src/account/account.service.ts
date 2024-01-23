@@ -60,6 +60,7 @@ export class AccountService {
         user.packagesDeposited= payload.package;
         user.confirmationReceipt= payload.receiptDeposit
         await user.save();
+        
       } catch (error) {
         throw new BadRequestException({error, status: HttpStatus.BAD_REQUEST})
       }
@@ -82,9 +83,10 @@ export class AccountService {
       }
     }
 
-  
-
-
+    public async fetchAllUser() {
+      const users =  await this.userService.find({});
+      return users;
+    }
 
 
  

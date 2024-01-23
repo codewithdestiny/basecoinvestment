@@ -32,6 +32,14 @@ async function bootstrap() {
     }
   })
 
+  Handlebars.registerHelper("each", function(context, options) {
+    var ret = "";
+    for (var i = 0, j = context.length; i < j; i++) {
+      ret = ret + options.fn(context[i]);
+    }
+    return ret;
+  });
+
   app.setViewEngine('hbs');
   await app.listen(3000);
 }

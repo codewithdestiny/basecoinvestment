@@ -101,8 +101,7 @@
                         <h2 class="text-sky-800 ">Rate of Returns </h2>
                         <h3 class="text-xs mt-2">The value here accrues daily plus referral if any</h3>
                         <div class="w-fit mx-auto mt-3 flex gap-x-7 justify-between">
-                        <h3 class="w-full mx-auto text-xl md:text-2xl text-orange-800">43.49%</h3>
-                            <button id="btn-widthraw" class="py-1 px-5 bg-blue-600 hover:bg-blue-700 transition-colors text-white text-xs rounded">Withdraw</button>
+                        <h3 class="w-full mx-auto text-xl md:text-2xl text-orange-800">{{#if user}} ${{user.rateOfReturnInUsdt}} {{/if}}</h3>
                         </div>
                     </div>
                 </div>
@@ -143,7 +142,7 @@
                         <h2 class="text-sky-800 ">Instant Withdrawal </h2>
                         <h3 class="text-xs mt-2">Click to withdraw percent or all cryptocurrency from your wallet + plus charge fee</h3>
                         <div class="w-4/5 mx-auto mt-3 flex gap-x-6 justify-between">
-                        <h3 class="w-full mx-auto text-xl md:text-2xl text-green-600">-9%</h3>
+                        <h3 class="w-full mx-auto text-xl md:text-2xl text-green-600">{{#if user}} ${{user.amountDeposited}} {{/if}}</h3>
                             <button id="btn-widthraw" class="py-1 whitespace-nowrap px-5 bg-red-600 hover:bg-red-700 transition-colors text-white text-xs rounded">
                                 <a href="dashboard/withdrawal-form">Withdrawal</a>
                             </button>
@@ -166,7 +165,37 @@
                 </div>
 
                 <div class="mt-4">
-                    <p class="text-gray-300 my-4 text-4xl text-center">No Record Found!</p>
+                            <table  border="1" cellpadding="5" cellspacing="4">
+                                <tr class="border-b text-gray-700 text-xs md:text-xs uppercase border-gray-300" >
+                                    <td>Firstname</td>
+                                    <td>Pending Deposit</td>
+                                    <td>Withdrawal Amount</td>
+                                    <td>Rate of Return</td>
+                                    <td>
+                                        Action
+                                    </td>
+                                </tr>
+                                    {{#each allUser}}   
+                                <tr>
+                                    <td>{{firstName}}</td>
+                                    <td>{{amountDeposited}}</td>
+                                    <td>{{withdrawalAmt}}</td>
+                                    <td>{{rateOfReturnInUsdt}}</td>
+                                    <td>
+                                        <table>
+                                            <tr class="text-xs">
+                                                <td class="">
+                                                    <a href="dashboard/confirm-deposit" class="py-2 text-white hover:bg-sky-800 transition-all px-3 bg-sky-600 flex-nowrap rounded-xl"> Deposit</a>
+                                                </td>
+                                                <td class="">
+                                                    <a href="dashboard/confirm-withdrawal" class="py-2 text-white hover:bg-sky-800 transition-all px-3 bg-sky-600 flex-nowrap rounded-xl"> Withdraw</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                    {{/each}}
+                            </table>
                 </div>
             </form>
             <div data-aos="zoom-out" class="col-span-4 md:mt-6 mt-8 md:bg-gray-100">

@@ -21,7 +21,8 @@ export class AccountController {
     const firstName = req.session.user.firstName;
     const lastName = req.session.user.lastName;
     const user = await this.accountService.fetchUser(req.session.user._id);
-    return {title: ` Account Manager || ${process.env.APP_NAME}`, firstName, user}
+    const allUser = await this.accountService.fetchAllUser();
+    return {title: ` Account Manager || ${process.env.APP_NAME}`, firstName, user, allUser}
   }
 
 
@@ -30,6 +31,25 @@ export class AccountController {
   @UseGuards(AuthenticatorGuard)
   userManagement(){
     return {title: `Users Listing | ${process.env.APP_NAME}`}
+  }
+
+  @Get('confirm-deposit')
+  @UseGuards(AuthenticatorGuard)
+  @Render('cpanel/confirm-deposit')
+  getPendingDeposit() {
+    return {title: `Pending Deposit | ${process.env.APP_NAME}`};
+  }
+
+  @Get('confirm-withdrawal')
+  @UseGuards(AuthenticatorGuard)
+  @Render('cpanel/confirm-withdrawal')
+  getWithdrawal() {
+    return {title: `Pending Withdrawal | ${process.env.APP_NAME}`};
+  }
+
+  @Post('confirm-deposit')
+  pendingDepositForm(@Request() req: any) {
+    
   }
 
   @Get('products')

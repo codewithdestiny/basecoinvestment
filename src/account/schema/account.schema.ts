@@ -66,7 +66,7 @@ export class User extends Document{
     @Prop({default: 0, type: Number})
     solBal: Number
 
-    @Prop({default: 0, type: Number})
+    @Prop({default: 10, type: Number})
     rateOfReturnInUsdt: Number
 
     @Prop({default: 0, type: Number})
