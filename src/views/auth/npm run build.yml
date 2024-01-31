@@ -1,0 +1,11 @@
+npm run build
+
+npm run start:prod
+
+"start:prod": "node dist/src/main",
+
+5. Pic upload and view
+mongodb+srv://pressendSniperApp:xCPi2NcWKjxnC6g@pressend.df8towg.mongodb.net/?retryWrites=true&w=majority
+12. buy domain name, titan & tidio
+
+video
